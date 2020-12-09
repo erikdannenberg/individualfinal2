@@ -16,3 +16,4 @@ INSERT INTO tblCitiesImport VALUES
     ('Mexico City',19.4424,-99.131,'Mexico','MEX','primary',19028000),
     ('Los Angeles',34.1139,-118.4068,'United States','USA','NA',12815475),
     ('Dhaka',23.7231,90.4086,'Bangladesh','BGD','primary',12797394),
+    ('Buenos Aires',-34.6025,-58.3975,'Argentina','ARG','primary',12795000);
