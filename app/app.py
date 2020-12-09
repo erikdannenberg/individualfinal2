@@ -12,7 +12,7 @@ def zillow_import() -> List[Dict]:
         'password': 'root',
         'host': 'db',
         'port': '3306',
-        'database': 'citiesData'
+        'database': 'ZillowData'
     }
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
