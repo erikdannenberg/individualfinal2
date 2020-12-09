@@ -6,7 +6,7 @@ from flask import Flask, Response
 app = Flask(__name__)
 
 
-def cities_import() -> List[Dict]:
+def zillow_import() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'root',
@@ -17,7 +17,7 @@ def cities_import() -> List[Dict]:
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
 
-    cursor.execute('SELECT * FROM tblCitiesImport')
+    cursor.execute('SELECT * FROM tblZillowImport')
     result = cursor.fetchall()
 
     cursor.close()
@@ -28,7 +28,7 @@ def cities_import() -> List[Dict]:
 
 @app.route('/')
 def index() -> str:
-    js = json.dumps(cities_import())
+    js = json.dumps(zillow_import())
     resp = Response(js, status=200, mimetype='application/json')
     return resp
 

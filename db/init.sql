@@ -1,19 +1,33 @@
-CREATE DATABASE citiesData;
-use citiesData;
+CREATE DATABASE zillowData;
+use zillowData;
 
-CREATE TABLE IF NOT EXISTS tblCitiesImport (
-    `fldName` VARCHAR(21) CHARACTER SET utf8,
-    `fldLat` NUMERIC(6, 4),
-    `fldLong` NUMERIC(7, 4),
-    `fldCountry` VARCHAR(19) CHARACTER SET utf8,
-    `fldAbreviation` VARCHAR(3) CHARACTER SET utf8,
-    `fldCapitalStatus` VARCHAR(7) CHARACTER SET utf8,
-    `fldPopulation` INT
+CREATE TABLE IF NOT EXISTS tblZillowImport (
+    `fldIndex` NUMERIC(21),
+    `fldLivingSpace` NUMERIC(6, 4),
+    `fldBeds` NUMERIC(7, 4),
+    `fldBaths` NUMERIC(19),
+    `fldZip` NUMERIC(3),
+    `fldYear` NUMERIC(7),
+    `fldListPrice` NUMERIC
 );
-INSERT INTO tblCitiesImport VALUES
-    ('Tokyo',35.685,139.7514,'Japan','JPN','primary',35676000),
-    ('New York',40.6943,-73.9249,'United States','USA','NA',19354922),
-    ('Mexico City',19.4424,-99.131,'Mexico','MEX','primary',19028000),
-    ('Los Angeles',34.1139,-118.4068,'United States','USA','NA',12815475),
-    ('Dhaka',23.7231,90.4086,'Bangladesh','BGD','primary',12797394),
-    ('Buenos Aires',-34.6025,-58.3975,'Argentina','ARG','primary',12795000);
+INSERT INTO tblZillowImport VALUES
+(1, 2222, 3, 3.5, 32312, 1981, 250000),
+ (2, 1628, 3, 2,   32308, 2009, 185000),
+ (3, 3824, 5, 4,   32312, 1954, 399000),
+ (4, 1137, 3, 2,   32309, 1993, 150000),
+ (5, 3560, 6, 4,   32309, 1973, 315000),
+ (6, 2893, 4, 3,   32312, 1994, 699000),
+ (7, 3631, 4, 3,   32309, 1996, 649000),
+ (8, 2483, 4, 3,   32312, 2016, 399000),
+ (9, 2400, 4, 4,   32312, 2002, 613000),
+(10, 1997, 3, 3,   32311, 2006, 295000),
+(11, 2097, 4, 3,   32311, 2016, 290000),
+(12, 3200, 5, 4,   32312, 1964, 465000),
+(13, 4892, 5, 6,   32311, 2005, 799900),
+(14, 1128, 2, 1,   32303, 1955,  89000),
+(15, 1381, 3, 2,   32301, 2006, 143000),
+(16, 4242, 4, 5,   32303, 2007, 569000),
+(17, 2533, 3, 2,   32310, 1991, 365000),
+(18, 1158, 3, 2,   32303, 1993, 155000),
+(19, 2497, 4, 4,   32309, 1990, 289000),
+(20, 4010, 5, 3,   32309, 2002, 549900);
